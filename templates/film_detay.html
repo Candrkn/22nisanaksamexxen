@@ -1,0 +1,27 @@
+{% extends "index.html" %}
+{% load static %}
+{% block content %}
+
+<style>
+    .text-justify{
+        text-align: justify;
+    }
+</style>
+
+<div class="container mt-5">
+    <h1 class="text-warning text-center fw-bold mb-5 border-bottom border-white">{{film.isim}}</h1>
+    
+
+    <div class="row">
+        <div class="col-5">
+            <img class="rounded-circle" width="350" src="{{film.resim.url}}" alt="">
+        </div>
+
+        <div class="col-7">
+            <p class="text-white text-justify">{{film.aciklama}}</p>
+            <small class="text-white d-flex justify-content-end">{{film.yuklenme_tarih}}</small>
+        </div>
+    </div>
+
+{% endblock content %}
+
